@@ -1,4 +1,4 @@
-const APIKey = 'TOKEN'
+const APIKey = TOKEN // Get at accuweather
 const baseUrl = 'http://dataservice.accuweather.com/'
 
 const getCityUrl = cityName =>
