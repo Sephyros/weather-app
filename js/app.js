@@ -15,16 +15,10 @@ cityForm.addEventListener('submit', async event => {
 
   const timeIcon = `<img src="./src/icons/${WeatherIcon}.svg" />`
 
-  if (cityCard.classList.contains('d-none')) {
-    cityCard.classList.remove('d-none')
-  }
+  cityCard.classList.remove('d-none')
 
   console.log(IsDayTime)
-  if (IsDayTime) {
-    timeImg.src = './src/day.svg'
-  } else {
-    timeImg.src = './src/night.svg'
-  }
+  timeImg.src = IsDayTime ? './src/day.svg' : './src/night.svg'
 
   timeIconContainer.innerHTML = timeIcon
   cityNameContainer.textContent = LocalizedName
